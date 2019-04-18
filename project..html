@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html ng-app="projectApp" ng-controller="projectController">
+
+<head>
+<title>Project</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+
+</head>
+
+<body>
+
+<div class="row">
+    <div class="col-xs-4 col-xs-offset-4">
+      Insert X:<input type="number" class="form-control" placeholder="Insert X" ng-model="xCoordinates"/>
+    </div>
+</div>
+
+ <div class="row">
+    <div class="col-xs-4 col-xs-offset-4">    
+      Insert Y:<input type="number" class="form-control" placeholder="Insert Y" ng-model="yCoordinates"/>
+    </div>
+ </div>
+
+ <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">    
+      <table>
+
+        <tr>
+          <td class="text-center">Point ID</td>
+          <td class="text-center">Point Coordinates</td>
+          <td class="text-center">Point Distance</td>
+        </tr>
+
+        <tr ng-repeat="point in points | orderBy:'dist'">
+          <td class="text-center">{{point.id}}</td>
+          <td class="text-center">{{point.value}}</td>
+          <td class="text-center">{{point.distance | number :2}}</td>
+        </tr>
+
+      </table>
+    </div>
+ </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="js/javascript.js"></script>
+</body>
+
+</html>
