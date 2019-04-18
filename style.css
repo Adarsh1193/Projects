@@ -1,0 +1,19 @@
+.row {
+	margin-top: 20px;
+}
+
+table {
+	width: 100%;	
+}
+
+table tr:nth-of-type(odd) {
+	background: #f8f8f8;
+}
+
+table tr:first-of-type {
+	background: beige;
+}
+
+table td {
+	border: solid 1px #e7e7e7;
+}
